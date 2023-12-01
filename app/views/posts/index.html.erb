@@ -1,4 +1,10 @@
+<% unless user_signed_in? %>
+  <%= button_to 'Sign in', new_user_session_path %>
+<% end %>
+
+
 <h1>All Posts</h1>
+
 
 <% @posts.each do |post| %>
   <% if user_signed_in? %>
@@ -10,4 +16,5 @@
   <%= post.message %> <br>
   <br>
 <% end %>
+
 
