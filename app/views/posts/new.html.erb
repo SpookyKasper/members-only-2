@@ -1,5 +1,7 @@
 <h1>New Post</h1>
 
+<%= current_user.id %>
+
 <%= form_with model: @post do |f| %>
   <%= f.label :title %><br>
   <%= f.text_field :title %><br>
